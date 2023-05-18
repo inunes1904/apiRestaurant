@@ -1,4 +1,4 @@
-# apiRestaurant
+# Restaurant API
 Final Project Barchelor Degree Consumable API from a Restaurant
 
 API Just to simulate an Restaurant in a Mall
