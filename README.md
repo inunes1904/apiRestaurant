@@ -9,3 +9,6 @@
 
 ## Database Diagram
 ![](https://github.com/inunes1904/apiRestaurant/blob/main/DiagramDB.png?raw=true)
+
+## Swagger OpenAI Documentation
+![](https://github.com/inunes1904/apiRestaurant/blob/main/OpenAI%20Swagger.png?raw=true)
