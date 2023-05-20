@@ -9,12 +9,12 @@ public class ItemPedido {
   private Long id;
 
   @ManyToOne
-  private Item itemID;
+  private Item items;
 
   @ManyToOne
-  private Pedido pedidoID;
+  private Pedido pedidos;
 
   @Column(nullable = false)
-  private int quantidade;
+  private Integer quantidade;
 
 }
