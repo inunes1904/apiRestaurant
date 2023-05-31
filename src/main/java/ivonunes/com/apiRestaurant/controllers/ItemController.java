@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/items")
@@ -30,9 +31,9 @@ public class ItemController {
     return itemRepository.save(item);
   }
 
-@PostMapping("/{id}")
-public Item findItemByID( @PathVariable Long id) {
-  return itemRepository.findByTipoID(id);
-}
+  @GetMapping("/{id}")
+  public Optional<Item> getSingleItem(@PathVariable Long id) {
+    return itemRepository.findById( id );
+  }
 
 }
