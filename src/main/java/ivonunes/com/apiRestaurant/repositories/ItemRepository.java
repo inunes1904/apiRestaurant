@@ -8,4 +8,7 @@ import java.util.List;
 
 public interface ItemRepository extends JpaRepository<Item, Long> {
   List<Item> findByTipoItem(String tipoItem);
+
+  Item findByTipoID(Long id);
+
 }

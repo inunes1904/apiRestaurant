@@ -26,11 +26,13 @@ public class ItemController {
   }
 
   @PostMapping("/newitem")
-  public Item createItem(@RequestBody @RequestParam Item item){
+  public Item createItem(@RequestBody  Item item){
     return itemRepository.save(item);
   }
 
-
-
+@PostMapping("/{id}")
+public Item findItemByID( @PathVariable Long id) {
+  return itemRepository.findByTipoID(id);
+}
 
 }
