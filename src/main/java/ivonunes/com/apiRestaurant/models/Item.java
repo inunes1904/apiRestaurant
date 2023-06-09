@@ -4,6 +4,7 @@ package ivonunes.com.apiRestaurant.models;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="item")
@@ -19,8 +20,8 @@ public class Item {
   private Integer tempoConcepcao;
   private String tipoItem;
 
-  @OneToMany(mappedBy = "items",fetch = FetchType.EAGER)
-  private List<ItemPedido> items;
+  @OneToMany(mappedBy = "item", fetch = FetchType.EAGER)
+  private Set<ItemPedido> items;
 
   public Item(String nome, String imagem, Double preco, Integer tempoConcepcao, String tipoItem) {
     this.nome = nome;

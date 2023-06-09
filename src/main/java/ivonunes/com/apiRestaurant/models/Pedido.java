@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 public class Pedido {
@@ -26,8 +27,8 @@ public class Pedido {
   @Column(length = 9)
   private String numeroContribuinte;
 
-  @OneToMany(mappedBy = "pedidos", fetch = FetchType.EAGER)
-  private List<ItemPedido> pedidos;
+  @OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER)
+  private Set<ItemPedido> pedidos;
 
 
   public Pedido() {
